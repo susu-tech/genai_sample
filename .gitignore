@@ -1,2 +1,5 @@
 # Add *.pyc files to ignore
 *.pyc
+
+*.lock
+uv.lock
