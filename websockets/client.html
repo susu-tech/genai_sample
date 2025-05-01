@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket Chat + Server Push</title>
+</head>
+
+<body>
+  <h2>WebSocket Chat (with Server Push)</h2>
+  <input id="msg" type="text" />
+  <button onclick="send()">Send</button>
+  <pre id="log"></pre>
+
+  <script>
+    const log = document.getElementById("log");
+    const ws = new WebSocket("ws://localhost:8765");
+
+    ws.onopen = () => log.textContent += "[System] Connected to server\n";
+    ws.onmessage = (event) => {
+      log.textContent += event.data + "\n";
+    };
+
+    function send() {
+      const input = document.getElementById("msg");
+      ws.send(input.value);
+      log.textContent += "You: " + input.value + "\n";
+      input.value = "";
+    }
+  </script>
+</body>
+
+</html>

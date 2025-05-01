@@ -2,16 +2,19 @@
 
 生成 AI 関連の調査用
 
-## server-sent-events
+- 通信
+- MCP
 
-server-sent events 通信の確認用
+## Server-sent events
+
+server-sent events 通信の確認
 
 ```sh
 cd server-sent-events
 flask --app app run
 ```
 
-## json-rpc-2.0
+## JSON-RPC 2.0
 
 https://www.jsonrpc.org/specification#response_object
 
@@ -38,8 +41,22 @@ cd json-rpc-2.0
 python server.py
 
 # 別ターミナルでクライアント起動
-python client.py
+python batch_client.py
 ```
+
+## WebSocket
+
+WebSocket 通信の確認
+
+```sh
+cd websockets
+
+# サーバー起動
+python server.py
+
+```
+
+ブラウザで`client.html`を開いて通信確認
 
 ## mcp-server
 
