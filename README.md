@@ -13,9 +13,23 @@ flask --app app run
 
 ## json-rpc-2.0
 
+https://www.jsonrpc.org/specification#response_object
+
 JSON-RPC 2.0 通信の確認
 
-シンプルな実行
+### 通常のパターン
+
+```sh
+cd json-rpc-2.0
+
+# サーバー起動
+python server.py
+
+# 別ターミナルでクライアント起動
+python client.py
+```
+
+### バッチ処理のパターン
 
 ```sh
 cd json-rpc-2.0
