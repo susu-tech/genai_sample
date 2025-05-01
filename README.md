@@ -44,6 +44,16 @@ python server.py
 python batch_client.py
 ```
 
+### WebSocket 利用のパターン
+
+```sh
+# サーバーを起動
+python json-rpc-2.0/websocket_server.py
+
+# クライアントからリクエスト
+python json-rpc-2.0/websocket_client.py
+```
+
 ## WebSocket
 
 WebSocket 通信の確認
